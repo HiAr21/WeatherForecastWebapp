@@ -1,0 +1,98 @@
+:root{
+    --card-height: 55vh;
+    /* --card-width: calc(var(--card-height) / 1.25); */
+    --card-width: 45vw;
+}
+*{
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    min-height: 100vh;
+    background: #212534;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+}
+h1{
+    color: white;
+    font-family: serif;
+    margin-bottom: 20px;
+}
+.card{
+    /* background: url("");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    width: var(--card-width);
+    height: auto;
+    background-color: #59a1ea;
+    /* filter: blur(1px); */
+    padding: 3px;
+    /* position: relative; */
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    font-family: "Gloria Hallelujah", cursive;
+}
+#radios{
+    /* display:flex;
+    flex-direction: row; */
+    color: black;
+    font-size: 0.8rem;
+}
+input{
+    width: 80%;
+    padding: 3px;
+}
+.card-child{
+    margin: 10px;
+    box-sizing: border-box;
+    width: calc(var(--card-width)/1.3);
+    height: calc(var(--card-height)/2);
+    background-color: #95c0eb;
+    border: 2px solid rgb(44, 77, 115);
+}
+.child1{
+    height: auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.child2{
+    color: black;
+    text-align: center;
+    display: grid;
+    grid-template: repeat(7, 1fr) / repeat(4, 1fr);
+}
+.info{
+    border: 2px solid black;
+    margin: 3px;
+    font-size: 0.8rem;
+}
+.info1{
+    grid-area: 1/ 1/ 3/ 3;
+}
+.info2{
+    grid-area: 3/ 1/ 4/ 4;
+}
+.info3{
+    grid-area: 4/ 1/ 6/ 3;
+}
+.info4{
+    grid-area: 4/ 3/ 6/ 5;
+}
+.info5{
+    grid-area: 6/ 1/ 8/ 3;
+}
+.info6{
+    grid-area: 6/ 3/ 8/ 5;
+}

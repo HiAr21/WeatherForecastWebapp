@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some app using a public api</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Titan+One&display=swap">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+    <h1></h1>
+    <div class="card">
+        <div class="card-child child1">
+            <form action="/submit" method="POST">
+                <!-- <div id="radios"><input type="radio" name="city" value="city">By city name
+                <input type="radio" name="lonlat">Latitude and Longitude</div> -->
+                <!-- <input type="text" name="latitude" placeholder="Latitude" id="inputCity">
+                <input type="text" name="longitude" placeholder="Langitude" id="inputCity"> -->
+                <input type="text" name="cityName" placeholder="Enter the location name" id="inputCity">
+                <input type="submit" value="submit">
+            </form>
+        </div>
+            <div class="card-child child2">
+                <% if (locals.main) { %>
+                <div class="info info1">Temp    
+                    <%= main.temp %>K
+                </div>
+                <div class="info info2">feels like
+                    <%= main.feels_like %>K
+                </div>
+                <div class="info info3">min temp
+                    <%= main.temp_min %>K
+                </div>
+                <div class="info info4">max temp
+                    <%= main.temp_max %>K
+                </div>
+                <div class="info info5">pressure
+                    <%= main.pressure %>hPa
+                </div>
+                <div class="info info6">humidity
+                    <%= main.humidity %>%
+                </div>
+                <% } %>
+            </div>
+    </div>
+
+</body>
+</html>
